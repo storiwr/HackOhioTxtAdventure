@@ -1,71 +1,59 @@
-//
+/*
 //
 // Exit - represents an exit to a location
 // 
-// Last modification date : October 07, 1997
+// Last modification date : October 4, 2014
 //
-public class Exit 
+public class RoomItem 
 {
 	// Numerical codes
 	public static final int UNDEFINED = 0;
-	public static final int NORTH = 1;
-	public static final int SOUTH = 2;
-	public static final int EAST  = 3;
-	public static final int WEST  = 4;
-	public static final int UP    = 5;
-	public static final int DOWN  = 6;
-	public static final int NORTHEAST = 7;
-	public static final int NORTHWEST = 8;
-	public static final int SOUTHEAST = 9;
-	public static final int SOUTHWEST = 10;
-	public static final int IN = 11;
-	public static final int OUT = 12;
-	public static final int FORWARD = 13;
-	public static final int BACK = 14;
-	public static final int PEER = 15;
-	public static final int REACH = 16;
+	public static final int FOUNTAIN = 1;
+	public static final int ITEM2 = 2;
+	public static final int ITEM3  = 3;
+	public static final int ITEM4  = 4;
+	public static final int ITEM5    = 5;
+	public static final int ITEM6  = 6;
+	public static final int ITEM7 = 7;
+	public static final int ITEM8 = 8;
+	public static final int ITEM9 = 9;
+	public static final int ITEM10 = 10;
+	public static final int ITEM11 = 11;
+	public static final int ITEM12 = 12;
 
 	// String codes	
 	public static final String[] dirName = 
 	{ 
 		"UNDEFINED",
-		"NORTH",
-		"SOUTH",
-		"EAST",
-		"WEST",
-		"UP",
-		"DOWN",
-		"NORTHEAST",
-		"NORTHWEST",
-		"SOUTHEAST",
-		"SOUTHWEST",
-		"IN",
-		"OUT",
-		"FORWARD",
-		"BACK",
-		"PEER",
-		"REACH"
+		"FOUNTAIN",
+		"ITEM2",
+		"ITEM3",
+		"ITEM4",
+		"ITEM5",
+		"ITEM6",
+		"ITEM7",
+		"ITEM8",
+		"ITEM9",
+		"ITEM10",
+		"ITEM11",
+		"ITEM12"
 	};
 
 	public static final String[] shortDirName = 
 	{
 		"NULL",
-		"N",
-		"S",
-		"E",
-		"W",
-		"U",
-		"D",
-		"NE",
-		"NW",
-		"SE",
-		"SW",
-		"I",
-		"O",	
-		"F",
-		"B",
-		"P",
-		"R"
+		"I1",
+		"I2",
+		"I3",
+		"I4",
+		"I5",
+		"I6",
+		"I7",
+		"I8",
+		"I9",
+		"I10",
+		"I11",
+		"I12"		
 	};
 
 	// Member variables
@@ -145,3 +133,4 @@ public class Exit
 	}
 
 }
+*/

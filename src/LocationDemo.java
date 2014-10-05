@@ -23,12 +23,12 @@ public class LocationDemo extends Applet
 		super();
 	}
 
-	// Initialisation method
+	// Initialization method
 	public void init()
 	{
 		super.init();
 
-		// Define colours
+		// Define colors
 		setBackground(Color.white);
 		setForeground(Color.black);
 
@@ -38,6 +38,7 @@ public class LocationDemo extends Applet
 		BorderLayout b = new BorderLayout();
 		appletPanel.setLayout (b);
 		add(appletPanel);
+
 		
 		// Define UI items
 		commandInput  = new TextField(20);
@@ -55,16 +56,31 @@ public class LocationDemo extends Applet
 		Location l1 = new Location ("Entrance to hall", "You stand at the entrance of a long hallway. The hallway gets darker\nand darker, and you cannot see what lies beyond. To the east\nis an old oaken door, unlocked and beckonning");
 		Location l2 = new Location ("End of hall", "You have reached the end of a long dark hallway. You can\nsee nowhere to go but back");
 		Location l3 = new Location ("Small study", "This is a small and cluttered study, containing a desk covered with\npapers. Though they no doubt are of some importance,\nyou cannot read their writing");
-
+		Location l4 = new Location ("Large Courtyard", "You find yourself outside, a full moon \noverhead. In the center is a large fountain\n ovegrown with vines and moss. \nThe other side is dark.");
+		Location l5 = new Location ("As you approach the fountain, you hear a deep rumbling sound far below.\nYou hear a sudden gurgling sound. Water gushes up from the old fountain.");
+		Location l6 = new Location ("Cautiously, you peer over the edge into the gently rippling \nwater. It is remarkably clear. Odd considering how old it appears. \nYou see something at the bottom of the fountain.");
 		// Create an exit for l1
 		l1.addExit (new Exit(Exit.NORTH, l2));
 		l1.addExit (new Exit(Exit.EAST, l3));
+		l1.addExit (new Exit(Exit.NORTHEAST, l4));
 
 		// Create an exit for l2
 		l2.addExit (new Exit(Exit.SOUTH, l1));
 
 		// Create an exit for l3
 		l3.addExit (new Exit(Exit.WEST, l1));
+		
+		// Create an exit for l4
+		l4.addExit (new Exit(Exit.FORWARD, l5));		
+		l4.addExit (new Exit(Exit.SOUTHWEST, l1));
+		
+		// Create an exit for 15
+		l5.addExit (new Exit(Exit.PEER, l6));
+		l5.addExit (new Exit(Exit.BACK, l4));
+		
+		// Create an exit for 15
+				l6.addExit (new Exit(Exit.REACH, l6));
+				l6.addExit (new Exit(Exit.BACK, l4));
 
 		// Set up room locations
 		currentLocation = l1;
@@ -98,7 +114,7 @@ public class LocationDemo extends Applet
 		String command;
 
 		// Was a button pressed ? 
-		if (evt.target instanceof Button)
+		if (evt.target instanceof Button )
 		{
 			// Obtain string
 			command = commandInput.getText();
