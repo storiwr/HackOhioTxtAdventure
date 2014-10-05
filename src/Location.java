@@ -5,7 +5,8 @@ import java.util.Enumeration;
 //
 // Location - represents a gaming location
 //
-// Last modification date : October 08, 1997
+//Original code created: October 08, 1997
+//Adapted October 5, 2014
 //
 public class Location 
 {
