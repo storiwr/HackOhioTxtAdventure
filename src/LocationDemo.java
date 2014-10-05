@@ -9,6 +9,7 @@ import java.awt.*;
 //Original code created: October 08, 1997
 //Adapted October 5, 2014
 //
+@SuppressWarnings("serial")
 public class LocationDemo extends Applet
 {
 	Location currentLocation;
@@ -25,6 +26,7 @@ public class LocationDemo extends Applet
 	}
 
 	// Initialization method
+	@Override
 	public void init()
 	{
 		super.init();
@@ -167,6 +169,7 @@ public class LocationDemo extends Applet
 		
 	}
 
+	@Override
 	public boolean action (Event evt, Object focus)
 	{
 		String command;

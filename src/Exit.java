@@ -114,6 +114,7 @@ public class Exit
 	}
 
 	// toString method
+	@Override
 	public String toString()
 	{
 		return m_directionName;

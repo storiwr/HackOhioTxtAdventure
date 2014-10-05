@@ -1,5 +1,4 @@
 import java.util.Vector;
-import java.util.Enumeration;
 
 //
 //
@@ -13,9 +12,11 @@ public class Location
 	// Member variables
 	private String m_roomTitle;
 	private String m_roomDescription;
+	@SuppressWarnings("rawtypes")
 	private Vector m_vecExits;
 
 	// Blank constructor
+	@SuppressWarnings("rawtypes")
 	public Location()
 	{
 		// Blank title + description
@@ -25,6 +26,7 @@ public class Location
 	}
 
 	// Partial constructor
+	@SuppressWarnings("rawtypes")
 	public Location( String title )
 	{
 		// Assign title
@@ -38,6 +40,7 @@ public class Location
 	}
 
 	// Full constructor
+	@SuppressWarnings("rawtypes")
 	public Location( String title, String description )
 	{
 		// Assign title + description
@@ -49,12 +52,14 @@ public class Location
 	}
 
 	// toString method
+	@Override
 	public String toString()
 	{
 		return m_roomTitle;
 	}
 
 	// Adds an exit to this location
+	@SuppressWarnings("unchecked")
 	public void addExit ( Exit exit )
 	{
 		m_vecExits.addElement (exit);
@@ -70,6 +75,7 @@ public class Location
 	}
 
 	// Returns a vector of exits
+	@SuppressWarnings("rawtypes")
 	public Vector getExits ()
 	{
 		// Return a clone, as we don't want an external
