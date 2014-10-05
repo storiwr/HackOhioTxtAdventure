@@ -58,10 +58,10 @@ public class LocationDemo extends Applet
 		Location l3 = new Location ("Small study", "This is a small and cluttered study, containing a desk covered with\npapers. Though they no doubt are of some importance,\nyou cannot read their writing");
 		Location l4 = new Location ("Large Courtyard", "You find yourself outside, a full moon \noverhead. In the center is a large fountain\n ovegrown with vines and moss. \nThe other side is dark.");
 		Location l5 = new Location ("As you approach the fountain, you hear a deep rumbling sound far below.\nYou hear a sudden gurgling sound. Water gushes up from the old fountain.");
-		Location l6 = new Location ("Cautiously, you peer over the edge into the gently rippling \nwater. It is remarkably clear. Odd considering how old it appears. \nYou see something at the bottom of the fountain.");
-		Location l7 = new Location ("Cautiously,");
-		Location l8 = new Location ("Description of l8 here!");
-		Location l9 = new Location ("Description of l9 here!");
+		Location l6 = new Location ("Cautiously, you peer over the edge into the gently rippling \nwater. It is remarkably clear. Odd, considering how old it appears. \nYou see something at the bottom of the fountain.");
+		Location l7 = new Location ("You reach your hand into the cool water in an effort to retrieve the \nobject. Suddenly a powerful burning sensation rips through your arm. You yank your hand out \nand return to middle of the courtyard.");
+		Location l8 = new Location ("The far side is pitch black. Despite the full moon, \nno light seems to penetrate these shadows. You reach out blindly \nand feel something cold under your hand.");
+		Location l9 = new Location ("A heavy door swings open. Stumbling, you find yourself in a cavernous room. Moonlight from a row of tall windows on the far wall is your only source of light. Ahead you hear a crash.");
 		Location l10 = new Location ("Description of l10");
 		Location l11 = new Location ("Description of l11,  no way back ");
 		Location l12 = new Location ("Description of l12 , no way back");
@@ -94,15 +94,15 @@ public class LocationDemo extends Applet
 		l6.addExit (new Exit(Exit.BACK, l4));
 		
 		// Create an exit for l7
-		l7.addExit (new Exit(Exit.REACH, l6));
 		l7.addExit (new Exit(Exit.BACK, l4));
 
 		//Create an exit for l8
+		l8.addExit (new Exit(Exit.REACH, l9));
 		l8.addExit (new Exit(Exit.BACK, l4));
 			
 		//Create an exit for l9 
-		l9.addExit (new Exit(Exit.WEST, l10));
-		l9.addExit (new Exit(Exit.EAST, l1));
+		l9.addExit (new Exit(Exit.FORWARD, l10));
+		l9.addExit (new Exit(Exit.BACK, l6));
 		
 		//Create an exit for l10
 		l10.addExit (new Exit(Exit.NORTH, l11));
