@@ -53,38 +53,39 @@ public class LocationDemo extends Applet
 		appletPanel.add("South", inputPanel);
 
 		// Create two locations
-		Location l1 = new Location ("Entrance to hall", "You stand at the entrance of a long hallway. The hallway gets darker\nand darker, and you cannot see what lies beyond. To the east\nis an old oaken door, unlocked and beckonning");
-		Location l2 = new Location ("End of hall", "You have reached the end of a long dark hallway. You can\nsee nowhere to go but back");
+		Location l1 = new Location ("Entrance to hall", "You stand at the entrance of a long hallway. The hallway gets darker\nand darker, and you cannot see what lies beyond. To the east\nis an old oaken door, unlocked and beckonning.");
+		Location l2 = new Location ("End of hall", "You have reached the end of a long dark hallway. You can see nothing up ahead. \nTo the west are a pair of french double doors. \nPale light filters through the dust covered panes.");
 		Location l3 = new Location ("Small study", "This is a small and cluttered study, containing a desk covered with\npapers. Though they no doubt are of some importance,\nyou cannot read their writing");
-		Location l4 = new Location ("Large Courtyard", "You find yourself outside, a full moon \noverhead. In the center is a large fountain\n ovegrown with vines and moss. \nThe other side is dark.");
-		Location l5 = new Location ("As you approach the fountain, you hear a deep rumbling sound far below.\nYou hear a sudden gurgling sound. Water gushes up from the old fountain.");
-		Location l6 = new Location ("Cautiously, you peer over the edge into the gently rippling \nwater. It is remarkably clear. Odd, considering how old it appears. \nYou see something at the bottom of the fountain.");
-		Location l7 = new Location ("You reach your hand into the cool water in an effort to retrieve the \nobject. Suddenly a powerful burning sensation rips through your arm. You yank your hand out \nand return to middle of the courtyard.");
-		Location l8 = new Location ("The far side is pitch black. Despite the full moon, \nno light seems to penetrate these shadows. You reach out blindly \nand feel something cold under your hand.");
-		Location l9 = new Location ("A heavy door swings open. Stumbling, you find yourself in a cavernous room. Moonlight from a row of tall windows on the far wall is your only source of light. Ahead you hear a crash.");
-		Location l10 = new Location ("Description of l10");
-		Location l11 = new Location ("Description of l11,  no way back ");
-		Location l12 = new Location ("Description of l12 , no way back");
-		Location l13 = new Location ("Description of l13");
-		Location l14 = new Location ("Description of l14");
-		Location l15 = new Location ("Description of l15");
+		Location l4 = new Location ("Large Courtyard", "You find yourself outside, a full moon overhead. In the center \nis a large fountain ovegrown with vines and moss. \nThe other side is dark.");
+		Location l5 = new Location ("As you approach the fountain, you hear a deep rumbling sound far below. \nYou hear a sudden gurgling sound. Water gushes up from the old fountain.");
+		Location l6 = new Location ("Cautiously, you peer over the edge into the gently rippling water. It is remarkably clear. \nOdd, considering how old it appears. \nYou see something at the bottom of the fountain.");
+		Location l7 = new Location ("You reach your hand into the cool water in an effort to retrieve the object. \nSuddenly a powerful burning sensation rips through your arm. \nYou yank your hand out and return to middle of the courtyard.");
+		Location l8 = new Location ("The far side is pitch black. Despite the full moon, no light seems to penetrate these shadows. \nYou reach out blindly and feel something cold \nunder your hand.");
+		Location l9 = new Location ("A heavy door swings open. Stumbling, you find yourself in a cavernous room. \nMoonlight from a row of tall windows on the far wall is your only \nsource of light. Ahead you hear a crash.");
+		Location l10 = new Location ("Curious, you head toward the noise. Perhaps you aren't alone here after all. \nSomething darts across the floor, disturbing the dust in its wake. You chase after it, oblivious to your surroundings.\n As suddenly as it appeared the creature vanishes. Looking around. you realize you somehow made it back to the study.");
+		Location l11 = new Location ("Undeturred by the total and oppressive darkness, you press forward anyway. \nYou continue walking onward and onward. You can no longer hear your footsteps. \nYou can't even be sure you are moving forward.");
+		Location l12 = new Location ("Just when you believe all hope is lost, wondering if you will ever see light again, \na gust of wind blows up from beneith you. With a painful thud you realize you were falling. \nGingerly getting back \non your feet, you notice a dim light coming through what must be a crack under a door.");
+		Location l13 = new Location ("Thrusting the door wide open, you find yourself blinking madly, overwhelmed by the \nintense brightness of the midday sun. You look back at the old mansion, wondering what the hell happened. \nYou are so relieved, your first instinct is to hurry home and forget the whole thing. But then you will never know the secret behind the ancient house. \n you stand, hesitant, between the two options.");
+		Location l14 = new Location ("Relieved to finally be out and worried what your mother must be thinking, you \nhurry home! After all, some mysteries are better left unsolved.");
+		Location l15 = new Location ("With grave determination you turn back to the old mannor. You are going to \ndiscover its secrets if it's the last thing you do. Perhaps it was, for you were never seen again.");
 		Location l16 = new Location ("Description of l16");
 		
 		// Create an exit for l1
 		l1.addExit (new Exit(Exit.NORTH, l2));
 		l1.addExit (new Exit(Exit.EAST, l3));
-		l1.addExit (new Exit(Exit.NORTHEAST, l4));
-		l1.addExit (new Exit (Exit.WEST, l9));
+		l1.addExit (new Exit(Exit.WEST, l4));
+		
 		// Create an exit for l2
 		l2.addExit (new Exit(Exit.SOUTH, l1));
+		l2.addExit (new Exit(Exit.NORTH, l11));
 
 		// Create an exit for l3
 		l3.addExit (new Exit(Exit.WEST, l1));
 		
 		// Create an exit for l4
 		l4.addExit (new Exit(Exit.FORWARD, l5));		
-		l4.addExit (new Exit(Exit.SOUTHWEST, l1));
-		l4.addExit (new Exit(Exit.NORTHWEST, l8));
+		l4.addExit (new Exit(Exit.EAST, l1));
+		l4.addExit (new Exit(Exit.WEST, l8));
 		// Create an exit for l5
 		l5.addExit (new Exit(Exit.PEER, l6));
 		l5.addExit (new Exit(Exit.BACK, l4));
@@ -102,29 +103,27 @@ public class LocationDemo extends Applet
 			
 		//Create an exit for l9 
 		l9.addExit (new Exit(Exit.FORWARD, l10));
-		l9.addExit (new Exit(Exit.BACK, l6));
+		l9.addExit (new Exit(Exit.BACK, l8));
 		
 		//Create an exit for l10
-		l10.addExit (new Exit(Exit.NORTH, l11));
-		l10.addExit (new Exit(Exit.SOUTH, l12));
-		l10.addExit (new Exit(Exit.EAST, l9));
+		l10.addExit (new Exit(Exit.WEST, l1));
 		
 		//Create an exit for l11
-		l11.addExit (new Exit(Exit.EAST, l13));
+		l11.addExit (new Exit(Exit.FORWARD, l12));
 		
 		//Create an exit for l12
-		l12.addExit (new Exit(Exit.EAST, l14));
+		l12.addExit (new Exit(Exit.EAST, l13));
 		
 		//Create an exit for l13 
-		l13.addExit (new Exit(Exit.WEST, l11));
-		l13.addExit (new Exit(Exit.EAST, l2));
+		l13.addExit (new Exit(Exit.HOME, l14));
+		l13.addExit (new Exit(Exit.BACK, l5));
 		
 		//Create an exit for l14
-		l14.addExit (new Exit(Exit.WEST, l12));
-		l14.addExit (new Exit(Exit.EAST, l5));
+		l14.addExit (new Exit(Exit.STARTOVER, l1));
+	
 		//Create an exit for l15 
-		l15.addExit (new Exit(Exit.WEST, l14));
-		l15.addExit (new Exit(Exit.NORTH, l16));
+		l15.addExit (new Exit(Exit.STARTOVER, l1));
+		
 		
 		//Create an exit for l16
 		l16.addExit (new Exit(Exit.SOUTH, l15));
