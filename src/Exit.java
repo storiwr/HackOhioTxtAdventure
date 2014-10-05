@@ -25,7 +25,8 @@ public class Exit
 	public static final int PEER = 15;
 	public static final int REACH = 16;
 	public static final int HOME = 17;
-	public static final int STARTOVER = 18;
+	public static final int START = 18;
+	public static final int DIRECTIONS = 19;
 
 
 	// String codes	
@@ -49,7 +50,8 @@ public class Exit
 		"PEER",
 		"REACH",
 		"HOME",
-		"STARTOVER"
+		"START",
+		"DIRECTIONS"
 	};
 
 	public static final String[] shortDirName = 
@@ -72,7 +74,8 @@ public class Exit
 		"P",
 		"R",
 		"H",
-		"START"
+		"ST",
+		"DR"
 	};
 
 	// Member variables
