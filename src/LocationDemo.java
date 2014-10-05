@@ -59,11 +59,22 @@ public class LocationDemo extends Applet
 		Location l4 = new Location ("Large Courtyard", "You find yourself outside, a full moon \noverhead. In the center is a large fountain\n ovegrown with vines and moss. \nThe other side is dark.");
 		Location l5 = new Location ("As you approach the fountain, you hear a deep rumbling sound far below.\nYou hear a sudden gurgling sound. Water gushes up from the old fountain.");
 		Location l6 = new Location ("Cautiously, you peer over the edge into the gently rippling \nwater. It is remarkably clear. Odd considering how old it appears. \nYou see something at the bottom of the fountain.");
+		Location l7 = new Location ("Cautiously,");
+		Location l8 = new Location ("Description of l8 here!");
+		Location l9 = new Location ("Description of l9 here!");
+		Location l10 = new Location ("Description of l10");
+		Location l11 = new Location ("Description of l11,  no way back ");
+		Location l12 = new Location ("Description of l12 , no way back");
+		Location l13 = new Location ("Description of l13");
+		Location l14 = new Location ("Description of l14");
+		Location l15 = new Location ("Description of l15");
+		Location l16 = new Location ("Description of l16");
+		
 		// Create an exit for l1
 		l1.addExit (new Exit(Exit.NORTH, l2));
 		l1.addExit (new Exit(Exit.EAST, l3));
 		l1.addExit (new Exit(Exit.NORTHEAST, l4));
-
+		l1.addExit (new Exit (Exit.WEST, l9));
 		// Create an exit for l2
 		l2.addExit (new Exit(Exit.SOUTH, l1));
 
@@ -73,15 +84,52 @@ public class LocationDemo extends Applet
 		// Create an exit for l4
 		l4.addExit (new Exit(Exit.FORWARD, l5));		
 		l4.addExit (new Exit(Exit.SOUTHWEST, l1));
-		
-		// Create an exit for 15
+		l4.addExit (new Exit(Exit.NORTHWEST, l8));
+		// Create an exit for l5
 		l5.addExit (new Exit(Exit.PEER, l6));
 		l5.addExit (new Exit(Exit.BACK, l4));
 		
-		// Create an exit for 15
-				l6.addExit (new Exit(Exit.REACH, l6));
-				l6.addExit (new Exit(Exit.BACK, l4));
+		// Create an exit for l6
+		l6.addExit (new Exit(Exit.REACH, l7));
+		l6.addExit (new Exit(Exit.BACK, l4));
+		
+		// Create an exit for l7
+		l7.addExit (new Exit(Exit.REACH, l6));
+		l7.addExit (new Exit(Exit.BACK, l4));
 
+		//Create an exit for l8
+		l8.addExit (new Exit(Exit.BACK, l4));
+			
+		//Create an exit for l9 
+		l9.addExit (new Exit(Exit.WEST, l10));
+		l9.addExit (new Exit(Exit.EAST, l1));
+		
+		//Create an exit for l10
+		l10.addExit (new Exit(Exit.NORTH, l11));
+		l10.addExit (new Exit(Exit.SOUTH, l12));
+		l10.addExit (new Exit(Exit.EAST, l9));
+		
+		//Create an exit for l11
+		l11.addExit (new Exit(Exit.EAST, l13));
+		
+		//Create an exit for l12
+		l12.addExit (new Exit(Exit.EAST, l14));
+		
+		//Create an exit for l13 
+		l13.addExit (new Exit(Exit.WEST, l11));
+		l13.addExit (new Exit(Exit.EAST, l2));
+		
+		//Create an exit for l14
+		l14.addExit (new Exit(Exit.WEST, l12));
+		l14.addExit (new Exit(Exit.EAST, l5));
+		//Create an exit for l15 
+		l15.addExit (new Exit(Exit.WEST, l14));
+		l15.addExit (new Exit(Exit.NORTH, l16));
+		
+		//Create an exit for l16
+		l16.addExit (new Exit(Exit.SOUTH, l15));
+		l16.addExit (new Exit(Exit.WEST, l3));
+		
 		// Set up room locations
 		currentLocation = l1;
 
